@@ -5,18 +5,18 @@
        <auto>true</auto>
        <start>5</start>
        <period>1800</period>
-       <waitOnload>1800</waitOnload>
+       <waitOnload>3600</waitOnload>
        <minIdle>1</minIdle>
        <maxIdle>8</maxIdle>
      </parameter>
 
      <step name="renewClue">
-       <theme>wbh_test1</theme>
+       <theme>lhr_test4</theme>
      </step>
 
      <step name="crawl">
-       <theme>wbh_test1</theme>
-       <loadTimeout>60000</loadTimeout>
+       <theme>lhr_test4</theme>
+       <loadTimeout>60000</loadTimeout> 
        <lazyCycle>3</lazyCycle>
        <updateClue>false</updateClue>
        <dupRatio>80</dupRatio>
@@ -27,17 +27,17 @@
        <scrollMorePages>0</scrollMorePages>
      </step>
      <step name="renewClue">
-       <theme>wbh_test2</theme>
+       <theme>lhr_test3</theme>
      </step>
 
      <step name="crawl">
-       <theme>wbh_test2</theme>
+       <theme>lhr_test3</theme>
        <loadTimeout>60000</loadTimeout>
        <lazyCycle>3</lazyCycle>
        <updateClue>false</updateClue>
        <dupRatio>80</dupRatio>
        <timerTriggered>false</timerTriggered>
-       <depth>2</depth>
+       <depth>-1</depth>
        <width>-1</width>
        <scrollWindowRatio>1</scrollWindowRatio>
        <scrollMorePages>0</scrollMorePages>

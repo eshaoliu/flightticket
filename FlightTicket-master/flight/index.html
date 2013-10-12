@@ -19,7 +19,7 @@
         <div id="fragment1">
           <h1>航班票价查询</h1>
           <div class="SearchBox" id="search_box">
-            <form action="processTest.php" method="get" id="form">
+            <form action="process.php" method="get" id="form">
               <table id="form">
                 <tr>
                   <th>
@@ -58,17 +58,23 @@
                     </span>
                     <button type="submit" name="submit" class="SearchButton">
                       <span class="T2">搜索</span>
+                    </button> 
+					<button name="into" onclick="openNew2()">
+                      <span class="T2">添加提醒</span>
                     </button>
-                  </td>
+					<button name="into" onclick="openNew()">
+                      <span class="T2">取消提醒</span>
+                    </button>
+					</td>
                 </tr>
               </table>
             </form>
           </div>
         </div>
-        <div id="fragment2">
+		<div id="fragment2">
           <h1>票价趋势</h1>
           <div class="SearchBox" id="search_box2">
-            <form action="processTest.php" method="get" id="form2">
+            <form action="process.php" method="get" id="form2">
               <table id="form2">
                 <tr>
                   <th>
