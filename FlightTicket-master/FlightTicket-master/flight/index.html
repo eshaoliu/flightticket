@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>航班查询</title>
+    <link type="text/css" href="../jquery-ui-1.9.1.custom/css/smoothness/jquery-ui-1.9.1.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../jquery-ui-1.9.1.custom/js/jquery-ui-1.9.1.custom.js"></script>
+    <script type="text/javascript" src="../Highcharts-2.3.3/js/highcharts.js"></script>
+    <script type="text/javascript" src="flight.js"> </script> 
+    <link type="text/css" href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="tabs">
+        <ul>
+          <li id="tab1"><a href="#fragment1"><span>查机票</span></a></li>
+          <li id="tab2"><a href="#fragment2"><span>看趋势</span></a></li>
+        </ul>
+        <div id="fragment1">
+          <h1>航班票价查询</h1>
+          <div class="SearchBox" id="search_box">
+            <form action="processTest.php" method="get" id="form">
+              <table id="form">
+                <tr>
+                  <th>
+                    <span class="T">城市</span>
+                  </th>
+                  <td>
+                    <span class="T1">从</span>
+                    <input type="text" name="from_city" />
+                    <span class="T1">到</span>
+                    <input type="text" name="to_city" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="T">方式</span>
+                  </th>
+                  <td>
+                    <div id="search_type">
+                    <input type="radio" checked="checked" name="search_type" id="search_type_owf" class="Radio" value="one_way_flight" />
+                    <span class="T2">单程</span>
+                    <input type="radio"  name="search_type" id="search_type_rtf" class="Radio" value="round_trip_flight" />
+                    <span class="T2">往返</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="T">日期</span>
+                  </th>
+                  <td>
+                    <span class="T1">往</span>
+                    <input type="text" name="from_date" id="from_date" />
+                    <span id="to">
+                      <span class="T1">返</span>
+                      <input type="text" name="to_date" id="to_date" />
+                    </span>
+                    <button type="submit" name="submit" class="SearchButton">
+                      <span class="T2">搜索</span>
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+        <div id="fragment2">
+          <h1>票价趋势</h1>
+          <div class="SearchBox" id="search_box2">
+            <form action="processTest.php" method="get" id="form2">
+              <table id="form2">
+                <tr>
+                  <th>
+                    <span class="T">城市</span>
+                  </th>
+                  <td>
+                    <span class="T1">从</span>
+                    <input type="text" name="from_city" />
+                    <span class="T1">到</span>
+                    <input type="text" name="to_city" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="T">趋势</span>
+                  </th>
+                  <td>
+                    <div id="search_type2">
+                    <input type="radio" checked="checked" name="option" id="lowest" class="Radio" value="lowest" />
+                    <span class="T2">每日最低</span>
+                    <input type="radio"  name="option" id="contrast" class="Radio" value="contrast" />
+                    <span class="T2">航空公司对比</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="T">时段</span>
+                  </th>
+                  <td>
+                    <span class="T1">从</span>
+                    <input type="text" name="from_date2" id="from_date2" />
+                    <span id="to2">
+                      <span class="T1">到</span>
+                      <input type="text" name="to_date2" id="to_date2" />
+                    </span>
+                    <button type="submit" name="submit2" class="SearchButton">
+                      <span class="T2">查看</span>
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="result_list">
+      </div>
+      <div id="diagram">
+      </div>
+    </div>
+  </body>
+</html>

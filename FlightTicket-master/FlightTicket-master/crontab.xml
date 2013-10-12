@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <crontab>
+   <thread name="haerbin">
+     <parameter>
+       <auto>true</auto>
+       <start>5</start>
+       <period>1800</period>
+       <waitOnload>1800</waitOnload>
+       <minIdle>1</minIdle>
+       <maxIdle>8</maxIdle>
+     </parameter>
+
+     <step name="renewClue">
+       <theme>wbh_test1</theme>
+     </step>
+
+     <step name="crawl">
+       <theme>wbh_test1</theme>
+       <loadTimeout>60000</loadTimeout>
+       <lazyCycle>3</lazyCycle>
+       <updateClue>false</updateClue>
+       <dupRatio>80</dupRatio>
+       <timerTriggered>false</timerTriggered>
+       <depth>2</depth>
+       <width>-1</width>
+       <scrollWindowRatio>1</scrollWindowRatio>
+       <scrollMorePages>0</scrollMorePages>
+     </step>
+     <step name="renewClue">
+       <theme>wbh_test2</theme>
+     </step>
+
+     <step name="crawl">
+       <theme>wbh_test2</theme>
+       <loadTimeout>60000</loadTimeout>
+       <lazyCycle>3</lazyCycle>
+       <updateClue>false</updateClue>
+       <dupRatio>80</dupRatio>
+       <timerTriggered>false</timerTriggered>
+       <depth>2</depth>
+       <width>-1</width>
+       <scrollWindowRatio>1</scrollWindowRatio>
+       <scrollMorePages>0</scrollMorePages>
+     </step>
+
+     <step name="renewClue">
+       <theme>wbh_test4</theme>
+     </step>
+
+     <step name="crawl">
+       <theme>wbh_test4</theme>
+       <loadTimeout>60000</loadTimeout>
+       <lazyCycle>3</lazyCycle>
+       <updateClue>false</updateClue>
+       <dupRatio>80</dupRatio>
+       <timerTriggered>false</timerTriggered>
+       <depth>2</depth>
+       <width>-1</width>
+       <scrollWindowRatio>1</scrollWindowRatio>
+       <scrollMorePages>0</scrollMorePages>
+     </step>
+ 
+   </thread>
+ </crontab>
